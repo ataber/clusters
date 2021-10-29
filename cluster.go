@@ -15,7 +15,7 @@ type Cluster struct {
 type Clusters []Cluster
 
 // New sets up a new set of clusters and randomly seeds their initial positions
-func New(k int, dataset Observations, seed int) (Clusters, error) {
+func New(k int, dataset Observations, seed int64) (Clusters, error) {
 	var c Clusters
 	if len(dataset) == 0 || len(dataset[0].Coordinates()) == 0 {
 		return c, fmt.Errorf("there must be at least one dimension in the data set")
